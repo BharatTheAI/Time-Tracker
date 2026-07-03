@@ -23,11 +23,11 @@ export default function AdminLayout() {
       <aside className="w-60 shrink-0 border-r border-slate-200 bg-white">
         <div className="flex items-center gap-2 border-b border-slate-200 px-5 py-4">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white">
-            TT
+            D
           </div>
           <div>
-            <p className="text-sm font-semibold text-slate-900">TimeTrack</p>
-            <p className="text-xs text-slate-400">Admin Console</p>
+            <p className="text-sm font-semibold text-slate-900">DAccountants</p>
+            <p className="text-xs text-slate-400">Time Track - Admin Console</p>
           </div>
         </div>
 

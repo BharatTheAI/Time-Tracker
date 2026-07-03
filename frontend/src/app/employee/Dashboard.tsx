@@ -22,7 +22,7 @@ export default function EmployeeDashboard() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <TopBar title="My Timesheet" subtitle="Log your work and track submitted entries" />
+      <TopBar title="DAccountants" subtitle="Time Tracker" />
 
       <main className="mx-auto max-w-5xl space-y-6 p-6">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
