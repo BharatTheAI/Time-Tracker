@@ -1,0 +1,38 @@
+project_id = "ca-firm-time-tracker"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = []
+jwt_expiry = 3600            # 1 hour access tokens
+refresh_token_rotation_enabled = true
+security_refresh_token_reuse_interval = 10
+enable_signup = false        # no public self-signup — admin provisions all accounts
+# Minimum password length enforced by Supabase Auth itself as a floor;
+# the FULL policy (uppercase/lowercase/number/special, 10+ chars) is
+# additionally enforced in application code (passwordPolicy.ts) inside
+# create-employee and reset-employee-credentials, since Supabase's
+# built-in password_min_length is the only native complexity knob.
+password_min_length = 10
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false # internal tool, admin creates accounts pre-confirmed
+# Invite-email template intentionally not configured — accounts are
+# provisioned directly by admin via createUser(), not via invite email.
+
+[edge_runtime]
+enabled = true
+policy = "oneshot"
+inspector_port = 8083
